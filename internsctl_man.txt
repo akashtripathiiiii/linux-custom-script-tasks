@@ -1,0 +1,31 @@
+internsctl - Custom Linux command for interns
+Version: v0.1.0
+
+Usage:
+  internsctl [command] [options]
+
+Commands:
+  user create <username>     Create a new user with the specified username.
+  user list [--sudo-only]    List all users or only users with sudo privileges.
+
+  cpu getinfo                Display CPU information (similar to 'lscpu').
+  memory getinfo             Display memory information (similar to 'free').
+
+  file getinfo [options] <file-name>
+                             Display information about the specified file.
+                             Options:
+                               --size, -s           Print file size.
+                               --permissions, -p   Print file permissions.
+                               --owner, -o         Print file owner.
+                               --last-modified, -m Print last modified time.
+                               --help              Display this help message.
+
+Options:
+  --help                     Display this help message.
+
+Examples:
+  internsctl user create john_doe
+  internsctl user list
+  internsctl cpu getinfo
+  internsctl memory getinfo
+  internsctl file getinfo --size --permissions myfile.txt
